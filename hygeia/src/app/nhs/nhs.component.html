@@ -1,0 +1,53 @@
+ <h3>Welcome to National Health Service</h3>
+
+ <div class="col-sm-offset-2 col-sm-10">
+  <button type="submit" class="btn btn-primary" style='margin-right:16px' (click)="getList()">FetchList</button>
+  
+</div>
+
+
+
+<p>of Recipient</p>
+ <div class="col-sm-offset-2 col-sm-10">
+   <li *ngFor="let detailsList of recp">
+   <p>Status : {{state.Status}}</p>
+   <!-- <p>Transaction id : {{state.Txnid}}</p> -->
+   
+   <b><p>Name:{{detailsList.name}}</p>
+    <p>Date of Birth:{{detailsList.dob}}</p>
+    <p>Blood Type:{{detailsList.btype}}</p>
+    <p>Organ:{{detailsList.otype}}</p></b>
+    <p>address:{{detailsList.addr}}</p>
+   <button type="submit" class="btn btn-primary"  (click)="getDnr(detailsList.addr,detailsList.btype,detailsList.otype)">Search</button>
+   
+  </li>     
+    </div> 
+   
+   
+    <b><p>Available donors</p></b>
+    <div class="col-sm-offset-2 col-sm-10" >
+      <li *ngFor="let detailsList of donrList">
+      <p>Status : {{state.Status}}</p>
+      <!-- <p>Transaction id : {{state.Txnid}}</p> -->
+      
+      <b><p>Name:{{detailsList.name}}</p>
+        <p>Date of Birth:{{detailsList.dob}}</p>
+        <p>Blood Type:{{detailsList.btype}}</p>
+        <p>Organ:{{detailsList.otype}}</p>
+        <p>address:{{detailsList.addr}}</p>
+        <p>recpAddress:{{forRecp}}</p>
+        <button type="submit" class="btn btn-primary" style='margin-right:16px'  (click)="match(forRecp,detailsList.addr,modify)">Match</button>
+        </b>
+        
+      </li>
+      
+      
+   
+    </div> 
+
+ 
+
+
+
+
+      
