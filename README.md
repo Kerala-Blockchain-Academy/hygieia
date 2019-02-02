@@ -5,7 +5,7 @@ a distributed data system i.e as blocks. It removes any middle men/ coordinators
 current system and thus removes human intervention
 
 # Getting started
-`git clone <repo/branch name>`
+`git clone https://github.com/Kerala-Blockchain-Academy/hygieia`
 `cd Hygieia`
 `npm install`
 `ng build`
